@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:task_management/firebase_utils.dart';
 import 'package:task_management/model/task.dart';
 import 'package:task_management/provider/auth_user_provider.dart';
@@ -14,10 +15,10 @@ class EditTaskBottomSheet extends StatefulWidget {
   const EditTaskBottomSheet({super.key, required this.task});
 
   @override
-  _EditTaskBottomSheetState createState() => _EditTaskBottomSheetState();
+  EditTaskBottomSheetState createState() => EditTaskBottomSheetState();
 }
 
-class _EditTaskBottomSheetState extends State<EditTaskBottomSheet> {
+class EditTaskBottomSheetState extends State<EditTaskBottomSheet> {
   final _formKey = GlobalKey<FormState>();
   late TextEditingController _titleController;
   late TextEditingController _descriptionController;
@@ -152,20 +153,28 @@ class _EditTaskBottomSheetState extends State<EditTaskBottomSheet> {
                               FirebaseUtils.updateTaskInFirestore(updatedTask,
                                       authProvider.currentUser!.id!)
                                   .then((value) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content:
-                                        const Text("Task updated successfully"),
-                                    showCloseIcon: true,
-                                    dismissDirection:
-                                        DismissDirection.endToStart,
-                                    duration: const Duration(seconds: 2),
-                                    backgroundColor: AppColors.blueColor,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20),
+                                final snackBar = SnackBar(
+                                  elevation: 0,
+                                  behavior: SnackBarBehavior.floating,
+                                  backgroundColor: Colors.transparent,
+                                  content: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 4.0, horizontal: 8.0),
+                                    constraints: const BoxConstraints(
+                                      maxHeight: 100.0,
+                                    ),
+                                    child: AwesomeSnackbarContent(
+                                      title: 'Success!',
+                                      message: 'Task updated successfully',
+                                      contentType: ContentType.success,
+                                      color:
+                                          AppColors.blueColor.withOpacity(0.6),
                                     ),
                                   ),
                                 );
+
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(snackBar);
                                 listProvider.getAllTasksFromFireStorage(
                                     authProvider.currentUser!.id!);
                                 Navigator.pop(context);

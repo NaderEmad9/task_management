@@ -1,3 +1,4 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -148,18 +149,25 @@ class AddTaskBottomSheetState extends State<AddTaskBottomSheet> {
       var authProvider = Provider.of<AuthUserProvider>(context, listen: false);
       FirebaseUtils.addTaskToFireStorage(task, authProvider.currentUser!.id!)
           .then((value) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: const Text("Task added successfully"),
-            showCloseIcon: true,
-            dismissDirection: DismissDirection.endToStart,
-            duration: const Duration(seconds: 2),
-            backgroundColor: AppColors.blueColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+        final snackBar = SnackBar(
+          elevation: 0,
+          behavior: SnackBarBehavior.floating,
+          backgroundColor: Colors.transparent,
+          content: Container(
+            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+            constraints: const BoxConstraints(
+              maxHeight: 100.0,
+            ),
+            child: AwesomeSnackbarContent(
+              title: 'Success!',
+              message: 'Task added successfully',
+              contentType: ContentType.success,
+              color: AppColors.blueColor.withOpacity(0.6),
             ),
           ),
         );
+
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
         listProvider.getAllTasksFromFireStorage(authProvider.currentUser!.id!);
         Navigator.pop(context);
       });
