@@ -76,11 +76,13 @@ Before you begin, ensure you have the following installed:
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/light/signup.png" alt="Sign Up" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/light/signin.png" alt="Sign In" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/light/task.png" alt="Task" width="220" style="margin: 10px;"/>
-  <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/light/task_add.png" alt="Task Add" width="220" style="margin: 10px;"/>
 </p>
 <p align="center">
+  <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/light/task_add.png" alt="Task Add" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/light/task_list_view.png" alt="Task List View" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/light/task_control.png" alt="Task Control" width="220" style="margin: 10px;"/>
+</p>
+<p align="center">
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/light/settings.png" alt="Settings" width="220" style="margin: 10px;"/>
 </p>
 
@@ -90,12 +92,13 @@ Before you begin, ensure you have the following installed:
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/signup_dark.png" alt="Sign Up Dark" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/signin_dark.png" alt="Sign In Dark" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/task_dark.png" alt="Task Dark" width="220" style="margin: 10px;"/>
-  <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/task_add_dark.png" alt="Task Add Dark" width="220" style="margin: 10px;"/>
 </p>
 <p align="center">
+  <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/task_add_dark.png" alt="Task Add Dark" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/task_list_view_dark.png" alt="Task List View Dark" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/task_control_dark.png" alt="Task Control Dark" width="220" style="margin: 10px;"/>
-  <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/settings_dark.png" alt="Settings Dark" width="220" style="margin: 10px;"/>
+</p>
+<p align="center"><img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/settings_dark.png" alt="Settings Dark" width="220" style="margin: 10px;"/>
 </p>
 
 ## Contributions
