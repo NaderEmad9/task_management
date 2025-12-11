@@ -1,26 +1,99 @@
 # Task Management App
 
-This **Task Management App** is a Flutter application designed to help users efficiently manage their tasks. The app allows users to add, edit, delete, and complete tasks with a clean and user-friendly interface.
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/>
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"/>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase"/>
+  <img src="https://img.shields.io/badge/Provider-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Provider"/>
+</p>
 
-## Features
+<p align="center">
+  A modern, feature-rich task management application built with Flutter, featuring real-time synchronization, dark mode support, and an intuitive user interface.
+</p>
 
-- **Add Tasks**: Create new tasks with titles, descriptions, and due dates.
-- **Edit Tasks**: Modify existing tasks for corrections or updates.
-- **Task Completion**: Mark tasks as completed with a simple swipe action.
-- **Delete Tasks**: Remove tasks from the list by swiping.
-- **Responsive UI**: Ensures that the layout adapts to different screen sizes and orientations.
-- **Dark Mode**: Support for both light and dark themes based on user preferences.
-- **Firebase Integration**: Sync tasks in real-time across devices using Firebase.
+---
 
-## Technologies Used
+## 📱 Features
 
-- **Flutter**: A cross-platform framework to build the app for both Android and iOS.
-- **Firebase**: For real-time data syncing and authentication.
-- **Provider**: State management for handling app-wide changes efficiently.
-- **Google Fonts**: To enhance the visual styling of text elements.
-- **Dart**: The programming language used in Flutter for app development.
+- ✅ **Add Tasks**: Create new tasks with titles, descriptions, and due dates
+- ✏️ **Edit Tasks**: Modify existing tasks for corrections or updates
+- ✔️ **Task Completion**: Mark tasks as completed with a simple swipe action
+- 🗑️ **Delete Tasks**: Remove tasks from the list by swiping
+- 📱 **Responsive UI**: Ensures that the layout adapts to different screen sizes and orientations
+- 🌓 **Dark Mode**: Support for both light and dark themes based on user preferences
+- 🔥 **Firebase Integration**: Sync tasks in real-time across devices using Firebase
+- 🔐 **Authentication**: Secure user authentication with Firebase Auth
 
-## Getting Started
+---
+
+## 🏗️ Architecture
+
+This project follows a **Provider-based State Management** pattern with a clean separation of concerns:
+
+```
+lib/
+├── auth/                    # Authentication screens
+│   ├── login/              # Login screen & logic
+│   └── register/           # Registration screen & logic
+├── home/                    # Main home screen
+├── model/                   # Data models
+│   ├── my_user.dart        # User model
+│   └── task.dart           # Task model
+├── provider/                # State management
+│   ├── app_theme_provider.dart
+│   ├── auth_user_provider.dart
+│   └── list_provider.dart
+├── task/                    # Task-related features
+│   ├── add_task.dart
+│   ├── edit_task.dart
+│   ├── task_list_item.dart
+│   └── task_tab.dart
+├── settings/                # Settings & preferences
+├── ui/                      # UI theme & styling
+│   ├── app_colors.dart
+│   ├── app_theme_data.dart
+│   └── dialog_utils.dart
+├── reuseable/               # Reusable widgets
+└── main.dart                # App entry point
+```
+
+### Architecture Flow
+
+```
+┌─────────────┐
+│   UI Layer  │  (Screens & Widgets)
+└──────┬──────┘
+       │
+┌──────▼──────┐
+│  Provider   │  (State Management)
+└──────┬──────┘
+       │
+┌──────▼──────┐
+│   Models    │  (Data Models)
+└──────┬──────┘
+       │
+┌──────▼──────┐
+│  Firebase   │  (Backend & Auth)
+└─────────────┘
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|-----------|
+| **Framework** | Flutter 3.0+ |
+| **Language** | Dart |
+| **Backend** | Firebase (Firestore, Auth) |
+| **State Management** | Provider |
+| **UI Components** | Material Design |
+| **Fonts** | Google Fonts |
+| **Platform** | Android, iOS |
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -35,13 +108,13 @@ Before you begin, ensure you have the following installed:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/task-management-app.git
+   git clone https://github.com/NaderEmad9/task_management.git
    ```
 
 2. **Navigate to the Project Directory**
 
    ```bash
-   cd task-management-app
+   cd task_management
    ```
 
 3. **Install Dependencies**
@@ -105,8 +178,64 @@ Before you begin, ensure you have the following installed:
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/task_list_view_dark.png" alt="Task List View Dark" width="220" style="margin: 10px;"/>
   <img src="https://github.com/NaderEmad9/task_management/raw/main/assets/screenshots/dark/settings_dark.png" alt="Settings Dark" width="220" style="margin: 10px;"/>
 
+
 </p>
 
-## Contributions
+---
+
+## 🧪 Testing
+
+Testing is an essential part of maintaining code quality and reliability.
+
+```bash
+# Run all tests
+flutter test
+
+# Run tests with coverage
+flutter test --coverage
+
+# Run specific test file
+flutter test test/unit/models/
+```
+
+### Test Structure
+
+```
+test/
+├── unit/                   # Unit tests
+│   ├── models/            # Model tests
+│   └── providers/         # Provider tests
+├── widget/                # Widget tests
+│   └── screens/          # Screen widget tests
+└── integration/           # Integration tests (coming soon)
+```
+
+| Type | Status |
+|------|--------|
+| Unit Tests | 🔜 Coming Soon |
+| Widget Tests | 🔜 Coming Soon |
+| Integration Tests | 🔜 Coming Soon |
+
+---
+
+## 🤝 Contributions
 
 Feel free to fork this repository, open issues, and submit pull requests. Contributions are highly appreciated!
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 👨‍💻 Author
+
+**Nader Emad**
+- GitHub: [@NaderEmad9](https://github.com/NaderEmad9)
+- LinkedIn: [Nader Emad](https://linkedin.com/in/nader-emad)
+
+---
+
+<p align="center">Made with ❤️ using Flutter</p>
