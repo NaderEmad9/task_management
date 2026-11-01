@@ -185,37 +185,13 @@ Before you begin, ensure you have the following installed:
 
 ## 🧪 Testing
 
-Testing is an essential part of maintaining code quality and reliability.
+This project ships without a test suite — it was built to demonstrate the architecture
+described above. My tested production work is the procurement platform: 118 test cases
+run by GitHub Actions on every push, alongside `flutter analyze`.
 
 ```bash
-# Run all tests
-flutter test
-
-# Run tests with coverage
-flutter test --coverage
-
-# Run specific test file
-flutter test test/unit/models/
+flutter analyze
 ```
-
-### Test Structure
-
-```
-test/
-├── unit/                   # Unit tests
-│   ├── models/            # Model tests
-│   └── providers/         # Provider tests
-├── widget/                # Widget tests
-│   └── screens/          # Screen widget tests
-└── integration/           # Integration tests (coming soon)
-```
-
-| Type | Status |
-|------|--------|
-| Unit Tests | 🔜 Coming Soon |
-| Widget Tests | 🔜 Coming Soon |
-| Integration Tests | 🔜 Coming Soon |
-
 ---
 
 ## 🤝 Contributions
